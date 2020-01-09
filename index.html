@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.png">
+  <title>Book It</title>
+</head>
+<body class="bg-teal-500">
+  <div class="container">
+    <div class="flex justify-center" id="headLogo">
+      <img src="logo.svg" alt="logo" width="150">
+    </div>
+    <div class="flex justify-center" id="headTitle">
+      <h1 class="text-6xl"><span class="text-white">Book</span> It</h1>
+    </div>
+    <div class="flex justify-center visible" id="alert"></div>
+    <div class="flex justify-center">
+      <form id="book-form" class="w-6/12 bg-white shadow-md px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
+            Book Title
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Title">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
+            Book Author
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="author" type="text" placeholder="Author">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
+            ISBN#
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="isbn" type="text" placeholder="ISBN">
+        </div>
+        <button class="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+            Submit
+        </button>
+      </form>
+    </div>
+    <div class="flex justify-center py-5">
+      <table class="table-auto w-6/12 shadow-md bg-white">
+        <thead>
+          <tr>
+            <th class="w-1/2 px-4 py-2">Title</th>
+            <th class="w-1/4 px-4 py-2">Author</th>
+            <th class="w-1/4 px-4 py-2">ISBN#</th>
+          </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
